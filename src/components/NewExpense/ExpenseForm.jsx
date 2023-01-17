@@ -61,7 +61,7 @@ function ExpenseForm({ onSaveExpenseData }) {
           <input
             type="date"
             id="date"
-            min="2022-01-01"
+            min="1999-01-01"
             max="2025-12-31"
             onChange={dateChangeHandler}
             className={enteredDate}
