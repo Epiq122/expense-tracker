@@ -5,8 +5,9 @@ import './Expenses.css';
 import Card from '../UI/Card';
 import ExpensesFilter from '../ExpenseFilter/ExpenseFilter';
 import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
-function Expenses({ expenses }) {
+function Expenses({ ...props }) {
   const [filteredYear, setFilteredYear] = useState('2020');
 
   // pass down the expenses array to the ExpenseFilter component( this controls it)
@@ -16,7 +17,7 @@ function Expenses({ expenses }) {
 
   // filter the expenses array based on the selected year
   // then we switched the mapping around in the Expense Item
-  const filteredExpenses = expenses.filter(
+  const filteredExpenses = props.expenses.filter(
     (expense) => expense.date.getFullYear().toString() === filteredYear,
   );
 
@@ -38,6 +39,7 @@ function Expenses({ expenses }) {
         filteredYear={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
+      <ExpensesChart expenses={filteredExpenses} />
       <ExpensesList expenses={filteredExpenses} />
       {/* checks to if the length of our list in 0 if it is show message if not show our items */}
       {/* {expensesContent} */}

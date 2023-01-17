@@ -17,7 +17,9 @@ module.exports = {
     'jsx-a11y/label-has-for': 'off',
     'label-has-associated-control': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
-    'next-line operator-linebreak': 'off',
+    'operator-linebreak': 'off',
     'prettier/prettier': 'error',
+    'no-restricted-syntax': 'off',
+    'guard-for-in': 'off',
   },
 };

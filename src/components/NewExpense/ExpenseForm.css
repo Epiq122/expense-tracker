@@ -24,3 +24,10 @@
 .new-expense__actions {
   text-align: right;
 }
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
